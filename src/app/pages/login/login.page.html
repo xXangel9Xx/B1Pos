@@ -1,0 +1,76 @@
+
+<ion-content class="content">
+  <ion-grid [fixed]="true" class="grid">
+    <ion-row class="row">
+      <ion-col>
+        <ion-header  class="ion-no-border">
+          <ion-toolbar>
+            <img src="assets/images/logo.png" alt="" class="img-logo">
+          </ion-toolbar>
+        </ion-header>   
+        <div class="contain">
+           
+          <h4 style="color:#abababee;"> Comienza tu viaje</h4>
+
+          <h1>Registrate en B1 Pos</h1>
+
+          <br>
+          <form [formGroup]="form" (ngSubmit)="logForm()" >
+            <ion-item fill="solid">
+                <ion-label position="floating">Email</ion-label>
+                <ion-input type="email" formControlName="email"></ion-input>
+                <ion-icon name="mail-outline" class="icon"></ion-icon>
+            </ion-item>
+            <br>
+            <ion-item fill="solid">
+              <ion-label position="floating">Contraseña</ion-label>
+              <ion-input type="password" formControlName="password" id="password"></ion-input>
+              <ion-buttons (click)="changePasswordVisibility()" class="icon button-eye">
+                <ion-icon *ngIf="showPassword==false"  name="eye-outline"  ></ion-icon>
+                <ion-icon *ngIf="showPassword"  name="eye-off-outline" ></ion-icon>
+              </ion-buttons>
+            </ion-item>          
+            <br>
+            <!-- <ion-button type="submit" fill="outline" [disabled]="form.invalid" >Submit</ion-button> -->
+            <ion-button type="submit" [disabled]="form.invalid" style="width: 100%;">Enviar</ion-button>
+          </form>
+          <br>
+          <ion-row>
+            <ion-col>
+              <hr class="hr">
+            </ion-col>
+            <ion-col>
+              <p style="margin-top: inherit; text-align: center;" > o iniciar con </p>
+            </ion-col>
+            <ion-col>
+              <hr class="hr"> 
+            </ion-col>
+          </ion-row>
+          <br>
+
+          <ion-row>
+            <ion-col class="social">
+              <ion-icon name="logo-facebook" class="social-icon"></ion-icon>
+            </ion-col>
+
+            <ion-col class="social">
+              <ion-icon name="logo-google" class="social-icon"></ion-icon>
+            </ion-col>
+
+            <ion-col class="social">
+              <ion-icon name="logo-apple" class="social-icon"></ion-icon>
+            </ion-col>
+          </ion-row>
+        </div>
+
+
+      </ion-col>
+
+      <ion-col class="col">
+        <img src="assets/images/login.png" alt="" class="img-login ">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>

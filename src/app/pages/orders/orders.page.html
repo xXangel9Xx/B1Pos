@@ -1,0 +1,104 @@
+<ion-header>
+  <ion-toolbar class="background-header" color="header">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title style="text-align: right;"><ion-icon name="home-outline"></ion-icon></ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="content">
+
+  <div class="contain-search">
+
+  </div> 
+
+
+  <ion-grid >
+    <ion-row>
+      <ion-col>
+        <!--  -->
+        <ion-grid> 
+          <ion-row>
+
+            <ion-col class="col" lines="none" routerDirection="root" [routerLink]="'/tables'" detail="false" routerLinkActive="selected">
+              <ion-icon name="tablet-landscape-outline" class="icon-user"></ion-icon>
+            </ion-col>
+            
+            
+            <ion-col class="col" lines="none" routerDirection="root" [routerLink]="'/products'" detail="false" routerLinkActive="selected">
+              <i  class="fa-solid fa-utensils icon-user"></i>
+            </ion-col>
+            
+            <ion-col class="col" lines="none" routerDirection="root" [routerLink]="'/orders'" detail="false" routerLinkActive="selected">
+              <ion-icon name="document-text-outline" class="icon-user"></ion-icon>
+            </ion-col>
+          </ion-row>        
+          <!--  -->
+          <ion-row>
+            
+            <ion-col class="col" lines="none" routerDirection="root" [routerLink]="'/tables'" detail="false" routerLinkActive="selected">
+              Mesas
+            </ion-col>
+            
+            
+            <ion-col class="col" lines="none" routerDirection="root" [routerLink]="'/products'" detail="false" routerLinkActive="selected">
+              Productos
+            </ion-col>
+            
+            <ion-col class="col" lines="none" routerDirection="root" [routerLink]="'/orders'" detail="false" routerLinkActive="selected">
+              Pedidos
+            </ion-col>
+          </ion-row>
+            
+        </ion-grid>
+        <!--  -->
+      </ion-col>
+
+
+      <ion-col style="display: flex; justify-content: center;"> 
+        <div style="display: flex; height: max-content; margin-top: auto;     margin-bottom: auto;">
+          <ion-icon name="person-circle" style="font-size:50px;"></ion-icon>
+          <p>Juan Carlos Acosta</p>
+
+        </div>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+  <hr class="hr">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col class="col-title">Cant</ion-col>
+      <ion-col class="col-title">Descuentos</ion-col>
+      <ion-col class="col-title">Total</ion-col>
+    </ion-row>
+
+    <div *ngFor="let item of items; index as i;">
+      <ion-row class="row-table">
+          <ion-col class="col-image">
+          <img src="{{item.img}}" alt="" class="img">
+            <p>{{item.name}}</p>
+            <p>{{item.quantity}}</p>           
+        </ion-col>
+        <ion-col class="col">
+          <p class="p-desc">
+            {{item.desc}}% Desc
+          </p>
+
+        </ion-col>
+        <ion-col class="col total">
+          <p class="p-desc">
+            {{item.price}}
+          </p>
+          <ion-icon name="trash-outline" class="icon-trash" (click)="deleteOne(i)"></ion-icon>
+        </ion-col>
+      </ion-row>
+    
+    </div>
+  </ion-grid>
+
+
+</ion-content>

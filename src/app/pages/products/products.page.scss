@@ -1,0 +1,180 @@
+.content::part(background){
+    background-color: #f3f3f3;
+}
+.grid{
+    min-width: 100vw;
+    padding: 0;
+    width: 100%;
+}
+.row{
+    padding: 0;
+}
+.contain-search{
+    background-image: url(../../../assets/images/meal.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 250px;
+    width: 100%;
+    padding-top: 160px
+}
+.custom {
+    padding: 0px 20px 0px 20px;
+    border-radius: 8px;
+    --background: rgba(255, 255, 255, 0.616) 100%;
+}
+.custom::part(native){
+    border-radius: 8px;
+}
+.icon{
+    position: absolute;
+    float: right;
+    right: 5px;
+    top: 20%;
+    font-size: 30px;
+}
+.button-eye{
+    height: 100%;
+    top: 0 !important;
+    cursor: pointer;
+}
+
+//////////////
+.col{
+    text-align: center;
+    cursor: pointer;
+}
+
+.hr{
+    width: 100%;
+    height: 1px;
+    margin: auto;
+    background-color: rgb(221, 106, 30);
+}
+
+/////////////////
+ion-slides {
+    height: 100%;
+  }
+
+  .swiper-slide {
+    display: block;
+  }
+
+  .swiper-slide h2 {
+    margin-top: 2.8rem;
+  }
+
+  .swiper-slide img {
+    max-height: 50%;
+    max-width: 80%;
+    margin: 60px 0 40px;
+    pointer-events: none;
+  }
+
+#slide-1,#slide-2,#slide-3,#slide-4{
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 250px;
+    width: 100%;
+    padding-top: 160px;
+    text-align: center;
+    color: white;
+    border-radius:8px;
+}
+.h1{
+  font-weight: 900;
+
+}
+#slide-1{
+  background-image: url(../../../assets/images/frites.jpeg);
+}
+#slide-2{
+  background-image: url(../../../assets/images/arroz.jpeg);    
+}
+#slide-3{
+  background-image: url(../../../assets/images/postres.jpeg);    
+}
+#slide-4{
+  background-image: url(../../../assets/images/bebidas.jpeg);    
+}
+.col-menu{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+.img-menu{
+    width: 35%;
+    height: 100%;
+    margin-right: 7px;
+}
+.detail-product{
+    display: flex;     
+    justify-content: space-around;
+    padding-right: 5px;
+}
+.contain-detail{
+    background-color: white;
+    padding-right: 5px;
+    width: 100%;
+}
+.decoration{
+    width: 11px; 
+    background-color: #db5f05;
+}
+.grid-detail{
+    text-align: center;
+    min-width: 100%;
+}
+
+.buttons{
+    height: 14px;
+    width: 13px;
+}
+.contain-items{
+    display: flex;
+    justify-content: center;
+}
+.contain-width-items{
+    display: flex;
+    flex-wrap: wrap;
+}
+@media screen and (min-width:400px) {
+    .icon-user{
+        font-size: 30px;
+    }
+ 
+}
+
+@media screen and (min-width:500px) {
+    
+    .grid-detail{
+        text-align: center;
+        min-width: max-content;
+        align-self: center;
+    }
+}
+@media screen and (min-width:700px) {
+    .col-menu{
+        width: 45%;
+    }
+    .contain-detail{
+        width: 100%;
+    }
+    .contain-width-items{
+        width: 100%;
+    }
+}
+@media screen and (min-width:1000px){
+    .hr{
+        width: 90%;
+    }
+    .menu-slide{
+        width: 90%;
+    }
+
+
+}

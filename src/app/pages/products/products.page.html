@@ -1,0 +1,213 @@
+<ion-header>
+  <ion-toolbar class="background-header" color="header">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title style="text-align: right;"><ion-icon name="home-outline"></ion-icon></ion-title>
+
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="content">
+
+  <div class="contain-search">
+      <form [formGroup]="form" >
+        <ion-item class="custom">
+          <ion-label position="floating">Buscar</ion-label>
+          <ion-input formControlName="search" (keyup)="logForm()"></ion-input>
+          <ion-buttons class="icon button-eye">
+            <ion-icon name="search-outline"></ion-icon>
+          </ion-buttons>
+        </ion-item>        
+      </form>
+  </div> 
+
+
+  <ion-grid >
+    <ion-row>
+      <ion-col>
+        <!--  -->
+        <ion-grid> 
+          <ion-row>
+
+            <ion-col class="col" lines="none" routerDirection="root" [routerLink]="'/tables'" detail="false" routerLinkActive="selected">
+              <ion-icon name="tablet-landscape-outline" class="icon-user"></ion-icon>
+            </ion-col>
+            
+            
+            <ion-col class="col" lines="none" routerDirection="root" [routerLink]="'/products'" detail="false" routerLinkActive="selected">
+              <i  class="fa-solid fa-utensils icon-user"></i>
+            </ion-col>
+            
+            <ion-col class="col" lines="none" routerDirection="root" [routerLink]="'/orders'" detail="false" routerLinkActive="selected">
+              <ion-icon name="document-text-outline" class="icon-user"></ion-icon>
+            </ion-col>
+          </ion-row>        
+          <!--  -->
+          <ion-row>
+            
+            <ion-col class="col" lines="none" routerDirection="root" [routerLink]="'/tables'" detail="false" routerLinkActive="selected">
+              Mesas
+            </ion-col>
+            
+            
+            <ion-col class="col" lines="none" routerDirection="root" [routerLink]="'/products'" detail="false" routerLinkActive="selected">
+              Productos
+            </ion-col>
+            
+            <ion-col class="col" lines="none" routerDirection="root" [routerLink]="'/orders'" detail="false" routerLinkActive="selected">
+              Pedidos
+            </ion-col>
+          </ion-row>
+            
+        </ion-grid>
+        <!--  -->
+      </ion-col>
+
+
+      <ion-col style="display: flex; justify-content: center;"> 
+        <div style="display: flex; height: max-content; margin-top: auto;     margin-bottom: auto;">
+          <ion-icon name="person-circle" style="font-size:50px;"></ion-icon>
+          <p>Juan Carlos Acosta</p>
+
+        </div>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+  <hr class="hr">
+    <!--  -->
+    <ion-grid class="menu-slide"> 
+      <ion-row>
+        <ion-col id="slide-1">
+            <div class="slide">
+              <h1 class="h1">Fries</h1>
+            </div>
+        </ion-col>
+
+        <ion-col id="slide-2" >
+            <h1 class="h1">Arroz</h1>
+        </ion-col>
+
+        <ion-col  id="slide-3">
+            <h1 class="h1">Postres</h1>
+        </ion-col>
+
+        <ion-col id="slide-4">
+            <h1 class="h1">Bebidas</h1>
+        </ion-col>
+
+    </ion-row>
+  </ion-grid> 
+  <hr class="hr">
+  <br>
+
+    
+
+  <div class="contain-items" >
+    <div class="contain-width-items"  *ngIf="form.value.search.trim().length === 0" >  
+
+        <div class="col-menu" *ngFor="let item of items;index as i">
+          <img src="{{item.img}}" alt="" class="img-menu">
+          <div  class="contain-detail">
+            <p>{{item.name}}</p>
+            <div class="detail-product">
+              <p>$ {{item.price}}</p>
+              <div >
+                <ion-grid>
+                    <ion-row >
+                      <ion-col  class="grid-detail">
+                        <ion-button color="light" size="small" class="buttons" (click)="decrement(i)"> - </ion-button>
+                      </ion-col>
+                      <ion-col class="grid-detail">
+                        <p> {{item.quantity}}</p>
+                      </ion-col>
+                      <ion-col class="grid-detail">
+                        <ion-button color="light" size="small" class="buttons" (click)="aument(i)"> + </ion-button>
+                      </ion-col>
+                      
+                    </ion-row>
+                  </ion-grid>
+                  
+                </div>
+            </div>
+          </div>
+          <div class="decoration"></div>
+        </div>
+
+        <div class="col-menu">
+        <div class="img-menu">
+        </div>
+        <div  class="contain-detail" style="background-color: #f3f3f3;">
+          <p></p>
+          <div class="detail-product">
+            <p></p>
+            <div >
+              </div>
+            </div>
+          </div>
+        </div>    
+      </div>  
+      
+      
+      <div class="contain-width-items"  *ngIf="form.value.search.trim().length !== 0" > 
+        <div class="col-menu" *ngFor="let item of search;index as i">
+          <img src="{{item.img}}" alt="" class="img-menu">
+          <div  class="contain-detail">
+            <p>{{item.name}}</p>
+            <div class="detail-product">
+              <p>$ {{item.price}}</p>
+              <div >
+                <ion-grid>
+                    <ion-row >
+                      <ion-col  class="grid-detail">
+                        <ion-button color="light" size="small" class="buttons" (click)="decrement(i)"> - </ion-button>
+                      </ion-col>
+                      <ion-col class="grid-detail">
+                        <p> {{item.quantity}}</p>
+                      </ion-col>
+                      <ion-col class="grid-detail">
+                        <ion-button color="light" size="small" class="buttons" (click)="aument(i)"> + </ion-button>
+                      </ion-col>
+                      
+                    </ion-row>
+                  </ion-grid>
+                  
+                </div>
+            </div>
+          </div>
+          <div class="decoration"></div>
+        </div>
+
+        <div class="col-menu">
+        <div class="img-menu">
+        </div>
+        <div  class="contain-detail" style="background-color: #f3f3f3;">
+          <p></p>
+          <div class="detail-product">
+            <p></p>
+            <div >
+              </div>
+            </div>
+          </div>
+        </div>    
+      </div>
+
+
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+</ion-content>

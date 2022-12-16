@@ -1,0 +1,59 @@
+.content{
+    min-height: 100vw;
+}
+.grid{
+    min-width: 100vw;
+    max-width: 100%;
+    min-height: 100vh;
+    max-height: 100%;
+    padding: 0;
+}
+.row{
+    min-height: 100vh;
+    max-height: 100%;
+}
+.col{
+    padding: 0;
+}
+.img-login{
+    min-width: 100%;
+    min-height: 100vh;
+    max-height: 100vh;
+}
+.icon{
+    position: absolute;
+    float: right;
+    right: 5px;
+    top: 20%;
+}
+.button-eye{
+    height: 100%;
+    top: 0 !important;
+    cursor: pointer;
+}
+.hr{
+    width: 100%;
+    height: 1px;
+    color: black;
+    border-bottom-width: medium;
+    margin-left: 0;
+}
+.social{
+    text-align: center;
+    border: solid 3px #EEEEEE;
+    border-radius: 8px;
+    margin-right: 5px;
+}
+.social-icon{
+    font-size: 30px;
+}
+.contain{
+    margin-top: 10% !important;
+}
+@media screen and (min-width:700px) {
+    .contain{
+        width: 350px;
+        margin: auto;
+    }
+    
+}

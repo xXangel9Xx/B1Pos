@@ -1,0 +1,86 @@
+.content::part(background){
+    background-color: #f3f3f3;
+}
+.grid{
+    min-width: 100vw;
+    padding: 0;
+    width: 100%;
+}
+.row{
+    padding: 0;
+}
+.contain-search{
+    background-image: url(../../../assets/images/meal.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 250px;
+    width: 100%;
+    padding-top: 160px
+}
+.custom {
+    padding: 0px 20px 0px 20px;
+    border-radius: 8px;
+    --background: rgba(255, 255, 255, 0.616) 100%;
+}
+.custom::part(native){
+    border-radius: 8px;
+}
+.icon{
+    position: absolute;
+    float: right;
+    right: 5px;
+    top: 20%;
+    font-size: 30px;
+}
+.button-eye{
+    height: 100%;
+    top: 0 !important;
+    cursor: pointer;
+}
+
+//////////////
+.row-table{
+    border-bottom: groove;
+}
+.col{
+    text-align: center;
+}
+
+.hr{
+    width: 100%;
+    height: 1px;
+    margin: auto;
+    background-color: rgb(221, 106, 30);
+}
+.col-title{
+    text-align: center;
+}
+.col-image{
+    display: flex;
+    justify-content: space-around;
+}
+.p-desc{
+    margin-top: 5%;
+    margin-right: 2%;
+}
+.total{
+    display: flex;
+    justify-content: center;
+
+}
+.img{
+    width: 30%;
+    margin-right: 8px;
+    border-radius: 8px;
+}
+.icon-trash{
+    font-size: 30px;
+    cursor: pointer;
+
+}
+@media screen and (min-width:400px) {
+    .icon-user{
+        font-size: 30px;
+    }
+ 
+}

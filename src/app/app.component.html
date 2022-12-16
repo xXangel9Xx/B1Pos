@@ -1,0 +1,67 @@
+<ion-app>
+
+  
+  <ion-split-pane contentId="main-content">
+    
+    <ion-menu contentId="main-content" type="overlay"  *ngIf="userService.userLogin">
+      <ion-content>
+        <ion-list id="inbox-list">
+          <ion-list-header>Menu Principal</ion-list-header>
+          <ion-note>Productos</ion-note>
+
+          <ion-menu-toggle auto-hide="false">
+            <ion-item lines="none" routerDirection="root" [routerLink]="'/products'" detail="false" routerLinkActive="selected">
+              <i slot="start" class="fa-solid fa-utensils"></i>
+              <ion-label class="icons-menu">Platillos</ion-label>              
+            </ion-item>
+
+            <ion-item lines="none">
+              <ion-icon slot="start" name="beer-outline"></ion-icon>
+              <ion-label>Bebidas</ion-label>              
+            </ion-item>
+
+            <ion-item lines="none">
+              <i slot="start" class="fa-solid fa-cheese icons-menu"></i>
+              <ion-label>Carnes</ion-label>              
+            </ion-item>
+            
+          </ion-menu-toggle>
+        </ion-list>
+
+        <ion-list id="labels-list">
+          <ion-list-header>Ajustes</ion-list-header>
+
+          <ion-item lines="none">
+            <ion-icon  slot="start" name="folder-open-outline"></ion-icon>
+            <ion-label>
+                Inventario
+            </ion-label>
+          </ion-item>
+
+          <ion-item lines="none">
+            <ion-icon slot="start" name="settings-outline"></ion-icon>
+            <ion-label>
+                Configuracion
+            </ion-label>
+          </ion-item>
+
+          <!-- routerLinkActive="selected" -->
+          <ion-item lines="none" lines="none" routerDirection="root" [routerLink]="''" detail="false" >
+            <ion-icon slot="start" name="power-outline"></ion-icon>
+            <ion-label>
+                Cerrar sesion
+            </ion-label>
+          </ion-item>
+
+
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+
+
+    
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+
+
+  </ion-split-pane>
+</ion-app>

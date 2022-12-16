@@ -1,0 +1,108 @@
+<ion-header>
+  <ion-toolbar class="background-header" color="header">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title style="text-align: right;"><ion-icon name="home-outline"></ion-icon></ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="content">
+
+  <div class="contain-search">
+
+  </div> 
+
+
+  <ion-grid >
+    <ion-row>
+      <ion-col>
+        <!--  -->
+         <ion-grid> 
+          <ion-row>
+          
+            <ion-col class="col" lines="none" routerDirection="root" [routerLink]="'/tables'" detail="false" routerLinkActive="selected">
+              <ion-icon name="tablet-landscape-outline" class="icon-user"></ion-icon>
+            </ion-col>
+
+
+            <ion-col class="col" lines="none" routerDirection="root" [routerLink]="'/products'" detail="false" routerLinkActive="selected">
+              <i  class="fa-solid fa-utensils icon-user"></i>
+            </ion-col>
+
+            <ion-col class="col" lines="none" routerDirection="root" [routerLink]="'/orders'" detail="false" routerLinkActive="selected">
+              <ion-icon name="document-text-outline" class="icon-user"></ion-icon>
+            </ion-col>
+          </ion-row>        
+          <!--  -->
+          <ion-row>
+
+            <ion-col class="col" lines="none" routerDirection="root" [routerLink]="'/tables'" detail="false" routerLinkActive="selected">
+              Mesas
+            </ion-col>
+
+
+            <ion-col class="col" lines="none" routerDirection="root" [routerLink]="'/products'" detail="false" routerLinkActive="selected">
+              Productos
+            </ion-col>
+
+            <ion-col class="col" lines="none" routerDirection="root" [routerLink]="'/orders'" detail="false" routerLinkActive="selected">
+              Pedidos
+            </ion-col>
+          </ion-row>
+
+        </ion-grid>
+        <!--  -->
+      </ion-col>
+
+
+      <ion-col style="display: flex; justify-content: center;"> 
+        <div style="display: flex; height: max-content; margin-top: auto;     margin-bottom: auto;">
+          <ion-icon name="person-circle" style="font-size:50px;"></ion-icon>
+          <p>Juan Carlos Acosta</p>
+
+        </div>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+  <hr class="hr">
+
+  <div class="contain-buttons">
+    <ion-grid class="grid-buttons" >
+      <ion-row>
+        <ion-col class="col-buttons" id="add" (click)="addTable()">
+          <ion-button shape="round" size="small" color="danger"><ion-icon name="add-outline"></ion-icon></ion-button>
+          <span>
+            Añadir Mesas
+          </span> 
+        </ion-col> 
+
+        <ion-col class="col-buttons">
+          <ion-button shape="round" size="small" color="success"><ion-icon name="checkmark-outline"></ion-icon></ion-button>
+          <span>
+            Mesas Ocupadas
+          </span>
+        </ion-col> 
+      </ion-row> 
+    </ion-grid>
+  </div>
+
+
+  <div class="contain-items">
+      <div  *ngFor="let item of items; index as i;">
+        <div class="items {{item.classBackground}}" (click)="changeCheck(i)">
+          <p class="number-table">
+            Mesa {{item.id}}
+          </p>
+          <ion-button class="check" shape="round" size="small" color="success" *ngIf="item.check"><ion-icon name="checkmark-outline"></ion-icon></ion-button>
+        </div>
+      </div>
+        
+
+  </div>
+</ion-content>
+
+
+<!-- [ngClass]="{'color-1':i%2==0, 'color-2':i%2!=0}" -->

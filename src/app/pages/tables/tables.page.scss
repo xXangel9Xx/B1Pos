@@ -1,0 +1,107 @@
+
+.content::part(background){
+    background-color: #f3f3f3;
+}
+.grid{
+    min-width: 100vw;
+    padding: 0;
+    width: 100%;
+}
+.row{
+    padding: 0;
+}
+.contain-search{
+    background-image: url(../../../assets/images/meal.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 250px;
+    width: 100%;
+    padding-top: 160px
+}
+.custom {
+    padding: 0px 20px 0px 20px;
+    border-radius: 8px;
+    --background: rgba(255, 255, 255, 0.616) 100%;
+}
+.custom::part(native){
+    border-radius: 8px;
+}
+.icon{
+    position: absolute;
+    float: right;
+    right: 5px;
+    top: 20%;
+    font-size: 30px;
+}
+.button-eye{
+    height: 100%;
+    top: 0 !important;
+    cursor: pointer;
+}
+
+//////////////
+.col{
+    text-align: center;
+    cursor: pointer;
+}
+
+.hr{
+    width: 100%;
+    height: 1px;
+    margin: auto;
+    background-color: rgb(221, 106, 30);
+}
+.grid-buttons{
+    width: 100%;     
+    margin-left: initial;
+}
+.col-buttons{
+    display: flex;
+    align-items: center;
+}
+#add{
+    cursor: pointer;
+}
+.items{
+    width: 150px;
+    height: 140px;
+    border-radius: 8px;
+    margin: 5px;
+    cursor: pointer;
+}
+.contain-items{
+    flex-wrap: wrap;
+    display: flex;
+    margin:10px;
+}
+.number-table{
+    text-align: center;
+    padding-top: 40%;
+}
+.check{
+    margin-left: 85%;
+}
+.color-1{
+    background-color: #DFBFA6;
+}
+.color-2{
+    background-color: #D4927A;
+}
+.color-3{
+    background-color: #DFCBA6;
+}
+.color-4{
+    background-color: #D3B37A;
+}
+@media screen and (min-width:400px) {
+    .icon-user{
+        font-size: 30px;
+    }
+ 
+}
+@media screen and (min-width:500px){
+    .grid-buttons{
+        width: 50%;    
+    }
+}
+

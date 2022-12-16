@@ -1,0 +1,9 @@
+{
+  "name": "B1Pos",
+  "integrations": {
+    "capacitor": {
+      "enabled": true
+    }
+  },
+  "type": "angular"
+}

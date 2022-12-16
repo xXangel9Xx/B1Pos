@@ -1,0 +1,1 @@
+No valido si el usuario esta o no logeado porque no tengo api donde pegar el post
